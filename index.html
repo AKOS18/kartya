@@ -255,7 +255,23 @@
     cursor: pointer;
     border-bottom-right-radius: 10px;
 }
+body, html {
+  height: 100%;
+}
 
+.parallax {
+  
+  background-image: url(kex.png);
+
+ 
+  height: 100%; 
+
+  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 .container {
@@ -304,6 +320,24 @@ button {
 </head>
 
 <body>
+  <div class="parallax"></div>
+
+<div>
+
+  <nav>
+    <div class="toggle"><i class="fa fa-bars menu" aria-hidden="true" ></i></div>
+    <ul>
+        <li> <a href='#'>Home</a></li>
+        <li> <a href="#">About</a></li>
+        <li> <a href="#">Services</a></li>
+        <li> <a href="#">Portfolio</a></li>
+        <li> <a href="#">Contact</a></li>
+    </ul>
+</nav> 
+
+</div>
+
+<div class="parallax"></div>
     <div class="card-container">
         <div class="card">
             <div class="profile-pic"><img src="kap 1.png" alt="kaptarhu"></div>
@@ -351,6 +385,7 @@ button {
 
    
       <script>
+        
         function closeToast() {
       var toast = document.getElementById('toast');
       toast.style.display = 'none';
@@ -493,7 +528,10 @@ button {
             <button onclick="sendMessage()">Küldés</button>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){$('.menu').click(function(){$('ul').toggleClass('active')})})
+    </script>
 </body>
 
 </html>
